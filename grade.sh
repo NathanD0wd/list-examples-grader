@@ -31,3 +31,9 @@ grep -v 'JUnit' output.txt > error.txt
 grep -v 'Time:' error.txt > output.txt
 echo ''
 cat output.txt
+
+
+VAR=`grep -c ') ' output.txt`
+echo $VAR
+SCORE=$((((2-$VAR)/2)*100))
+echo Score: $SCORE%
